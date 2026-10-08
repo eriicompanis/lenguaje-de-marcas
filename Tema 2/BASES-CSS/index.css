@@ -1,0 +1,23 @@
+
+/* CSS Nesting */
+.logo {
+  width: 150px;
+  height: 150px;
+  background: rgb(11, 233, 196);
+  padding: 1rem;
+  margin: 50px;
+  border: 5px solid black;
+
+
+  img {
+    width: 100%;
+  }
+}
+
+
+/* Reset */
+*{
+  box-sizing: border-box; /*esto sirve para que la anchura y altura de la caja entera
+(contenido + border + padding) sea de los px concretos, es decir 150px*/
+  
+}
