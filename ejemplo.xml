@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "tienda.dtd">
+<tienda>
+    <producto codigo="P01">
+        <nombre>Raton</nombre>
+        <precio>19.90</precio>
+    </producto>
+</tienda>

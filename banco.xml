@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<banco>
+    <sucursales codigo = "P01">
+        <cuentacorriente codigo ="11">
+            <cliente></cliente>
+            <cliente></cliente>
+        </cuentacorriente>
+        <cuentacorriente codigo = "12">
+            <clie></clie>
+        </cuentacorriente>
+    </sucursales>
+
+
+    <sucursales codigo = "P02">
+        <cuentacorriente codigo = "23">
+            <cliente></cliente>
+        </cuentacorriente>
+    </sucursales>
+</banco>

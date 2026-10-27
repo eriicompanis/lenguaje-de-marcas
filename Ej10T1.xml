@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<agenda xmlns:>
+    <contactos>
+        <contacto id ="1">
+            <nombre>Eric</nombre>
+            <apellidos>Ortiz Companis</apellidos>
+            <numero>63765489</numero>
+            <direccion></direccion>
+        </contacto>
+        
+        <contacto id ="2">
+            <nombre>Ivan</nombre>
+            <apellido>Alcazar villa</apellido>
+            <numero>735983573</numero>
+            <direccion></direccion>
+        </contacto>
+    </contactos>
+</agenda>
