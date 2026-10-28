@@ -3,18 +3,29 @@
 <banco>
     <sucursales codigo = "P01">
         <cuentacorriente codigo ="11">
-            <cliente></cliente>
-            <cliente></cliente>
+            <cliente>
+                <nombre>Eric Perez Reverte</nombre>
+                <DNI>764832669</DNI>
+            </cliente>
+            <cliente>
+                <nombre>Paquito Garcia</nombre>
+                <DNI>398461990</DNI>
+            </cliente>
         </cuentacorriente>
         <cuentacorriente codigo = "12">
-            <clie></clie>
+            <cliente>
+                <nombre>Alicia Salas</nombre>
+                <DNI>846892001</DNI>
+            </cliente>
         </cuentacorriente>
     </sucursales>
 
-
     <sucursales codigo = "P02">
         <cuentacorriente codigo = "23">
-            <cliente></cliente>
+            <cliente>
+                <nombre>Enriqueta Lopez</nombre>
+                <DNI>765432987</DNI>
+            </cliente>
         </cuentacorriente>
     </sucursales>
 </banco>
