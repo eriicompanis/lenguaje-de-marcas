@@ -1,0 +1,13 @@
+.parent {
+    background: #999;
+
+    .item{
+        --size: 100px;
+
+        background: indigo;
+        border: 5px solid gold;
+        color: gold;
+        width: var(--size);
+        height: var(--size);
+    }
+}

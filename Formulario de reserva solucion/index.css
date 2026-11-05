@@ -1,0 +1,197 @@
+/* Reset universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Estructura general de la página */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #111827;
+}
+
+header img {
+    width: 300px;
+    height: 110px;
+    object-fit: contain;
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Formulario */
+form {
+    width: 460px;
+    max-width: 100%;
+    padding: 0;
+    color: midnightblue;
+    background-color: #F4F1ED;
+    border: 9px solid #6A0DAD;
+    border-radius: 7px;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #b8b8b8;
+}
+
+legend {
+    color: darkred;
+    font-weight: bold;
+}
+
+.campo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.campo > label,
+.campo > .etiqueta {
+    flex: 0 0 135px;
+}
+
+.campo input:not([type="radio"]):not([type="checkbox"]),
+.campo select {
+    min-width: 0;
+    flex: 1;
+}
+
+.campo-edicion {
+    align-items: flex-start;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.opciones label,
+.condiciones label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.campo-vertical {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 65px;
+    resize: vertical;
+}
+
+.campo input[type="range"] {
+    flex: 1;
+    min-width: 40px;
+}
+
+output {
+    min-width: 35px;
+    text-align: right;
+}
+
+.condiciones {
+    font-size: 0.9rem;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* Pie de página */
+footer {
+    padding: 5px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+}
+
+footer h3 {
+    margin: 5px 0;
+    color: #F7C600;
+    font-size: 1rem;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Ajustes para pantallas estrechas */
+@media (max-width: 520px) {
+    main {
+        padding: 1rem;
+    }
+
+    form {
+        border-width: 6px;
+    }
+
+    fieldset {
+        padding: 0.75rem;
+    }
+
+    .campo {
+        flex-wrap: wrap;
+    }
+
+    .campo > label,
+    .campo > .etiqueta {
+        flex-basis: 100%;
+    }
+
+    .campo input:not([type="radio"]):not([type="checkbox"]),
+    .campo select {
+        flex-basis: 100%;
+    }
+}

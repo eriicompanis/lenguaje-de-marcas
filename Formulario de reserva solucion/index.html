@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TU NOMBRE Y APELLIDOS">
+    <title>Pixel Zone - Nueva reserva</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <img src="imagenes/logo.png" alt="Logotipo de Pixel Zone">
+    </header>
+
+    <main>
+        <form action="procesarreserva.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Nueva reserva</legend>
+
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"
+                        placeholder="Nombre y apellidos" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo"
+                        placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <div class="campo">
+                    <label for="plataforma">Plataforma:</label>
+                    <select id="plataforma" name="plataforma" required>
+                        <option value="" selected disabled>Selecciona una plataforma</option>
+                        <option value="PlayStation 5">PlayStation 5</option>
+                        <option value="Xbox Series X/S">Xbox Series X/S</option>
+                        <option value="Nintendo Switch">Nintendo Switch</option>
+                        <option value="PC">PC</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="producto">Producto:</label>
+                    <input type="text" id="producto" name="producto"
+                        list="productos" placeholder="Escribe o selecciona un producto"
+                        required>
+                    <datalist id="productos">
+                        <option value="EA Sports FC 27">
+                        <option value="Minecraft">
+                        <option value="Mario Kart">
+                        <option value="Grand Theft Auto V">
+                        <option value="The Legend of Zelda">
+                    </datalist>
+                </div>
+
+                <div class="campo campo-edicion">
+                    <span class="etiqueta">Edición:</span>
+                    <div class="opciones">
+                        <label><input type="radio" name="edicion" value="Estándar" required> Estándar</label>
+                        <label><input type="radio" name="edicion" value="Deluxe"> Deluxe</label>
+                        <label><input type="radio" name="edicion" value="Coleccionista"> Coleccionista</label>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad"
+                        min="1" value="1" required>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de recogida:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="presupuesto">Presupuesto máximo:</label>
+                    <input type="range" id="presupuesto" name="presupuesto"
+                        min="0" max="200" value="20" step="5" required>
+                    <output id="valor-presupuesto" for="presupuesto">20 €</output>
+                </div>
+
+                <div class="campo campo-vertical">
+                    <label for="observaciones">Observaciones:</label>
+                    <textarea id="observaciones" name="observaciones"
+                            placeholder="Indica aquí cualquier observación sobre la reserva"></textarea>
+                </div>
+
+                <div class="campo campo-vertical">
+                    <label for="imagen">Imagen del producto:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*">
+                </div>
+
+                <div class="campo condiciones">
+                    <label>
+                        <input type="checkbox" name="condiciones" value="aceptadas" required>
+                        Acepto las condiciones de reserva
+                    </label>
+                </div>
+
+                <div class="botones">
+                    <button type="submit">Enviar reserva</button>
+                    <button type="reset">Restablecer</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <h3>Síguenos en redes</h3>
+        <nav aria-label="Redes sociales">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                <img src="imagenes/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="imagenes/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                <img src="imagenes/twitter.png" alt="X (Twitter)">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                <img src="imagenes/youtube.png" alt="YouTube">
+            </a>
+        </nav>
+    </footer>
+
+    <script>
+        const presupuesto = document.getElementById("presupuesto");
+        const valorPresupuesto = document.getElementById("valor-presupuesto");
+
+        presupuesto.addEventListener("input", function () {
+            valorPresupuesto.value = presupuesto.value + " €";
+        });
+
+        document.querySelector("form").addEventListener("reset", function () {
+            valorPresupuesto.value = "20 €";
+        });
+    </script>
+</body>
+</html>
